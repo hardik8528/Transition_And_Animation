@@ -1,0 +1,81 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background: rgb(228, 102, 102);
+    box-sizing: border-box;
+}
+
+.nav{
+    width: 80%;
+    height: 100%;
+    padding: 50px;
+    color: white;
+    transform: translate3d(100%,0,0);
+    transition: 0.8s all cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+.nav.open{
+    transform: translate3d(0,0,0);
+    transition: 0.8s all cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.nav.open  ul  li  a {
+    transform: translate3d(40px,0,0);
+    animation: bounce 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.7) 0.1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bounce{
+    from{
+        transform: translate3d(40px,0,0);
+    }
+    to{
+        transform: translate3d(0,0,0);
+    }
+}
+
+.nav-toggle{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 90px;
+    height: 60px;
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.nav h2{
+    margin-top: 10vh;
+    font-size: 30px;
+    border-bottom: 2px solid white;
+    padding: 10px;
+}
+
+.nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+ul li{
+    padding: 30px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s all ease;
+}
+
+ul li:hover{
+    padding-left: 30px;
+    border-left: 3px solid white;
+}
+
+ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}

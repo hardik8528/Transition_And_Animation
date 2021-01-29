@@ -1,0 +1,36 @@
+ul{
+    list-style:none;
+  }
+  
+  .item{
+    background: #906272;
+    margin-top:20px;
+    padding:10px;
+    width: 500px;
+    height: 30px;
+  }
+  .ball{
+    width:20px;
+    height:20px;
+    background:blue;
+    display:inline-block;
+    border-radius:50%;
+  }
+  .item:hover .ball{
+    transform: translateX(300px);
+  }
+  .item-1 .ball{
+    transition: all 1s;
+  }
+  .item-2 .ball{
+    transition: all 1s ease;
+  }
+  .item-3 .ball{
+    transition: all 1s ease;
+  }
+  .item-3:hover .ball{
+    transition: all 0.2s;
+  }
+  .item-4 .ball{
+    transition: all 1s cubic-bezier(1,0,0,1);
+  }
